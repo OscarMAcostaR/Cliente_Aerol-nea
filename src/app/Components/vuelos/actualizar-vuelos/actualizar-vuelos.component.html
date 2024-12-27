@@ -1,0 +1,62 @@
+<div class="max-w-md mx-auto mt-6">
+  <h1 class="text-4xl font-semibold text-gray-900">Actualizar Vuelo</h1>
+
+  <!-- Código de Vuelo -->
+  <div class="relative z-0 w-full mb-5 group">
+    <label for="codigo_vuelo" class="block text-sm font-medium text-gray-700">Código de Vuelo</label>
+    <input
+      id="codigo_vuelo"
+      type="text"
+      [value]="vuelo.codigo_vuelo"
+      class="block w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+      readonly
+    />
+  </div>
+
+  <!-- Fecha y Hora -->
+  <div class="relative z-0 w-full mb-5 group">
+    <label for="fecha_hora" class="block text-sm font-medium text-gray-700">Fecha y Hora</label>
+    <input
+      id="fecha_hora"
+      type="datetime-local"
+      #fecha_hora
+      [value]="vuelo.fecha_hora"
+      class="block w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+    />
+  </div>
+
+  <!-- Estatus -->
+  <div class="relative z-0 w-full mb-5 group">
+    <label for="estatus" class="block text-sm font-medium text-gray-700">Estatus</label>
+    <input
+      id="estatus"
+      type="text"
+      #estatus
+      [value]="vuelo.estatus"
+      class="block w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+      placeholder="Ingrese el estatus"
+    />
+  </div>
+
+  <!-- Horas de Vuelo -->
+  <div class="relative z-0 w-full mb-5 group">
+    <label for="horas_vuelo" class="block text-sm font-medium text-gray-700">Horas de Vuelo</label>
+    <input
+      id="horas_vuelo"
+      type="number"
+      #horas_vuelo
+      [value]="vuelo.horas_vuelo"
+      class="block w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+      placeholder="Ingrese las horas de vuelo"
+      min="0"
+    />
+  </div>
+
+  <!-- Botón Guardar -->
+  <button
+    class="mt-4 bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+    (click)="save()"
+  >
+    Guardar Cambios
+  </button>
+</div>

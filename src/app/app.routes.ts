@@ -5,6 +5,9 @@ import { ActualizarAeropuertoComponent } from './Components/aeropuerto/actualiza
 import { PilotosComponent } from './Components/pilotos/pilotos.component';
 import { AddPilotoComponent } from './Components/pilotos/add-piloto/add-piloto.component';
 import { ActualizarPilotoComponent } from './Components/pilotos/actualizar-piloto/actualizar-piloto.component';
+import { VuelosComponent } from './Components/vuelos/vuelos.component';
+import { AddVuelosComponent } from './Components/vuelos/add-vuelos/add-vuelos.component';
+import { ActualizarVuelosComponent } from './Components/vuelos/actualizar-vuelos/actualizar-vuelos.component';
 
 export const routes: Routes = [
     {path: '', component: AeropuertoComponent},
@@ -19,7 +22,13 @@ export const routes: Routes = [
 
     {path:'addpiloto', component:AddPilotoComponent},
 
-    {path:'updatePiloto/:id', component: ActualizarPilotoComponent},
+    {path:'updatepiloto/:id', component: ActualizarPilotoComponent},
+
+    {path: 'listarvuelos', component: VuelosComponent},
+
+    {path: 'addvuelo',component: AddVuelosComponent},
+    
+    {path:'updatevuelo/:id', component: ActualizarVuelosComponent},
 
     
 ];
