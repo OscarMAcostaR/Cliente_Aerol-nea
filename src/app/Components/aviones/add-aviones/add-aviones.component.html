@@ -1,0 +1,83 @@
+<div class="max-w-md mx-auto mt-6">
+
+    <div class="lg:max-w-lg mb-4">
+        <p class="text-base/7 font-semibold text-indigo-600">Formulario de creación</p>
+        <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Aviones</h1>
+    </div>
+
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="codigo_avion" id="codigo_avion"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 
+                   border-b-2 border-gray-300 appearance-none dark:text-gray-400 
+                   dark:border-gray-600 dark:focus:border-green-500 focus:outline-none 
+                   focus:ring-0 focus:border-green-600 peer"
+            #codigo_avion placeholder="" />
+        <label for="floating_municipio"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 
+                   duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] 
+                   peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-green-600 
+                   peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 
+                   peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+            Código Avión
+        </label>
+    </div>
+
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="tipo_avion" id="tipo_avion"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+            placeholder="" #tipo_avion maxlength="100" />
+        <label for="tipo_avion"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform 
+            -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 
+            peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 
+            peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+            Tipo Avión
+        </label>
+    </div>
+
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="horas_de_vuelo" id="horas_de_vuelo"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 
+                   border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 
+                   dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+            placeholder="" #horas_de_vuelo maxlength="10" />
+        <label for="horas_de_vuelo"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 
+                   transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 
+                   rtl:peer-focus:translate-x-1/4 peer-focus:text-green-600 peer-focus:dark:text-green-500 
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 
+                   peer-focus:-translate-y-6">
+                   Horas de vuelo
+        </label>
+    </div>
+
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="capacidad_pasajeros" id="capacidad_pasajeros"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 
+                   border-gray-300 appearance-none dark:text-gray-400 dark:border-gray-600 
+                   dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+            placeholder="" #capacidad_pasajeros maxlength="10" />
+        <label for="capacidad_pasajeros"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 
+                   transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 
+                   rtl:peer-focus:translate-x-1/4 peer-focus:text-green-600 peer-focus:dark:text-green-500 
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 
+                   peer-focus:-translate-y-6">
+                   Capacidad Pasajeros
+        </label>
+    </div>
+
+    <button type="submit"
+        class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none 
+               focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 
+               text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        (click)="Save()">
+        <!-- (click)="Save()"> -->
+        Enviar
+    </button>
+
+    <button type=""
+        class="text-white bg-blue-700 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-teal-700 mx-20">
+        <a href="/listaraviones">Volver</a>
+    </button>
+</div>
