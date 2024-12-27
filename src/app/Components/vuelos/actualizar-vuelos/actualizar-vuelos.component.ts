@@ -58,7 +58,8 @@ export class ActualizarVuelosComponent {
           this.vuelo.codigo_vuelo,
           fecha_hora,
           estatus,
-          horas_vuelo
+          horas_vuelo,
+        
         )
     } else {
       Swal.fire(

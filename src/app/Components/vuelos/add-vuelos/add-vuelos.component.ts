@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { VuelosService } from '../../../Services/vuelos.service';
 import Swal from 'sweetalert2';
+import { AeropuertoService } from '../../../Services/aeropuerto.service';
 
 @Component({
   selector: 'app-add-vuelos',
@@ -8,12 +9,20 @@ import Swal from 'sweetalert2';
   styleUrls: ['./add-vuelos.component.css'],
 })
 export class AddVuelosComponent {
+  public aeropuertos: any[] = [];
   @ViewChild('codigo_vuelo') private codigo_vuelo!: ElementRef;
   @ViewChild('horas_vuelo') private horas_vuelo!: ElementRef;
   @ViewChild('fecha_hora') private fecha_hora!: ElementRef;
   @ViewChild('estatus') private estatus!: ElementRef;
+  @ViewChild('id_origen') private id_origen!: ElementRef;
+  @ViewChild('id_destino ') private id_destino!: ElementRef;
+  @ViewChild('estado ') private estado!: ElementRef;
 
-  constructor(private service: VuelosService) {}
+  constructor(
+    private vuelosService: VuelosService,
+    private aeropuertoService: AeropuertoService
+  ) {}
+
 
   save() {
     // Obtener los valores de los campos
@@ -21,6 +30,8 @@ export class AddVuelosComponent {
     const horasVuelo = this.horas_vuelo.nativeElement.value;
     const fechaHora = this.fecha_hora.nativeElement.value;
     const estatus = this.estatus.nativeElement.value;
+    const id_origen = this.id_origen.nativeElement.value;
+    const id_destino = this.id_destino.nativeElement.value;
 
     let validation = true;
 
@@ -49,11 +60,14 @@ export class AddVuelosComponent {
 
     // Si todas las validaciones pasan, envía los datos
     if (validation) {
-      this.service.addVuelo(
+      this.vuelosService.addVuelo(
         codigoVuelo,
         fechaHora,
         parseFloat(horasVuelo),
-        estatus
+        estatus,
+        id_origen,
+        id_destino,
+     
       );
     }
   }
