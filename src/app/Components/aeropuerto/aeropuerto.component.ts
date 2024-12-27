@@ -21,7 +21,4 @@ export class AeropuertoComponent {
   deleteAeropuerto(id: any){
     this.aeropuertoService.deleteAeropuerto(id);
   }
-
-
-
 }//End component class

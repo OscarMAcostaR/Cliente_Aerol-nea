@@ -19,28 +19,9 @@ export class AddAeropuertoComponent {
 
   constructor(private service: AeropuertoService){}
 
-  /*onFileSelected(event: any){
-    this.selectFile = event.target.files[0];
-  }*/
-  
-    
 
   save(){
-    /*if(this.selectFile){
 
-      const formData = new FormData();
-
-      formData.append('image', this.selectFile);
-
-      this.service.uploadImage(formData).subscribe((response: any)=>{
-        
-      });
-
-    }else{
-
-      //Sweet Alert
-      Swal.fire('Error', 'No se ha seleccionado ninguna imagen', 'error');
-    }*/
       const nombre_aeropuerto =  this.nombre_aeropuerto.nativeElement.value;
       const municipio =  this.municipio.nativeElement.value;
       const estado =  this.estado.nativeElement.value;
